@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+        
+
+
+    <!--  
+<form name="calculatorForm">
+    <input type="text" name="evalresult"/>
+   
+    <input type="button" name="btn7" value="7" onclick="valuecal(btn7.value)" class="figurenow"/> <input type="button" name="btn8" value="8" onclick="valuecal(btn8.value)" class="figurenow" /> <input type="button" name="btn9" value="9" onclick="valuecal(btn9.value)" class="figurenow"/>  <br><br><br>
+
+  <input type="button" name="result" value="=" onclick="evalresult.value=eval(evalresult.value)" class="figurenow"/> <input type="button" name="btnAddition" value="+" onclick="valuecal(btnAddition.value)" class="figurenow" />
+
+
+</form>
+
+ -->
+
+
+
+
+
+
+
+
+ <!-- 
+<form name="calculatorForm">
+
+
+<input type="text" name="evalresult" id="myInput" readonly/>
+<br><br>
+<div id="numberBtn">
+<input type="button" value="7" name="btn7" onclick="valuecal(btn7.value)" class="figurenow">
+<input type="button" value="8" name="btn8" onclick="valuecal(btn8.value)" class="figurenow">
+<input type="button" value="9" name="btn9" onclick="valuecal(btn9.value)" class="figurenow">
+<input type="button" value="+" name="btnAddition" onclick="valuecal(btnAddition.value)" class="figurenow">
+
+<br><br>
+<input type="button" value="4" name="btn4" onclick="valuecal(btn4.value)" class="figurenow">
+<input type="button" value="5" name="btn5" onclick="valuecal(btn5.value)" class="figurenow">
+<input type="button" value="6" name="btn6" onclick="valuecal(btn6.value)" class="figurenow">
+<input type="button" value="/" name="btndivide" onclick="valuecal(btndivide.value)" class="figurenow">
+<input type="button" value="-" name="btnminus" onclick="valuecal(btnminus.value)" class="figurenow">
+
+<br><br>
+<input type="button" value="1" name="btn1" onclick="valuecal(btn1.value)" class="figurenow">
+<input type="button" value="2" name="btn2" onclick="valuecal(btn2.value)" class="figurenow">
+<input type="button" value="3" name="btn3" onclick="valuecal(btn3.value)" class="figurenow">
+<input type="button" value="*" name="btnmultiply" onclick="valuecal(btnmultiply.value)" class="figurenow">
+
+
+<br><br>
+<input type="button" value="0" name="btn0" onclick="valuecal(btn0.value)" class="figurenow">
+<input type="button" value="." name="btndot" onclick="valuecal(btndot.value)" class="figurenow">
+<input type="button" value="C"  onclick="document.getElementById('myInput').value = ''" class="figurenow">
+<input type="button" value="=" name="result" onclick="evalresult.value=eval(evalresult.value)" class="figurenow">
+
+</div>
+</form>
+-->
+
+<div  id="mainCal">   
+    <div class="sideBar" onclick="togglemenu()">
+        <div class="toggle-btn">
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        </div>
+        <!--   for list, type="i" will bring the o; in -->
+        <ul>
+            <li onclick="simpleCal()"><a href="#">FIRST CALCULATOR</a></li>
+            <li onclick="manualCal()"><a href="#">SECOND CALCULATOR</a></li>
+            <li onclick="percentageCal()"><a href="#">PERCENTAGE CALCULATOR</a></li>
+           <li onclick="historyTouch()"><a href="#">HISTORY</a></li>
+           <li onclick="contactUs()"><a href="#">CONTACT US</a></li>
+       
+        </ul>
+            </div>
+    <h2 id="mainH2">THREE IN ONE CALCULATOR</h2>
+
+
+<div id="contactUs">
+<address>Developed By Kingz Visual Studio<br><br>
+    <a href="mailto:thetruepathahead@gmail.com">CONTACT US</a><br><br>
+    Visit us at:<br>
+    www.keviscope.com<br>
+</address>
+</div>
+
+ <!-- History-->
+ <div id="historyZone"> 
+    <h4>First Calculator History</h4>
+    <p id="historyStatus" style="display: none;"> 
+        <button onclick="clearBox()">Clear HISTORY</button>
+       
+    
+    <p id="history" style="list-style: none;">
+      
+    </p>
+</p> 
+<p id="Nohistory" style="display: none;"> NO HISTORY</p>
+   <br><br><br><br>
+
+
+<h4>Second Calculator History</h4>
+<p id="historyStatus2" style="display: none;"> 
+<button onclick="clearBox2()">Clear HISTORY</button>
+
+<p id="historyManual">
+
+
+</p>
+</p> 
+
+<p id="Nohistory2" style="display: none;"> NO HISTORY</p>
+
+</p>
+
+
+<br><br><br><br>
+
+<h4>Percentage Calculator History</h4>
+<p id="historyStatus3" style="display: none;"> 
+<button onclick="clearBox3()">Clear HISTORY</button>
+
+<p id="historyPercentge">
+
+
+</p>
+</p> 
+<p id="Nohistory3" style="display: none;"> NO HISTORY</p>
+
+
+</div>
+<div id="percentageCalculator">
+    <br>
+    <h2>Percentage Calculator</h2><br>
+    <label>Number</label><br>
+    <input type="text" id="dodo" placeholder="Enter Number" onkeypress="return isNumberKey(event, this.id)">
+    <br>
+    <br>
+    <label>Percentage</label><br>
+    <input type="text" id="dodoPercent" placeholder="Enter percentage" onkeypress="return isNumberKey(event, this.id)">
+    <br><br>
+    
+    <input type="submit" value="Get Percentage" onclick="calcPercent()" id="getPercentage"><br>
+    <br>
+    <input type="text" id="percentResult" readonly><br>
+    <input type="button" value="CLEAR" onclick="clearPercent()" id="clearPercent">
+    </div>
+
+
+<div id="manualCalculator">  
+ <br>
+    <h2>Second Calculator</h2><br>
+    <label>1st Number:</label><br>
+    <input type="type" id="n1" step="0.01"  onkeypress="return isNumberKey(event,this.id)">
+    <br> <br> 
+    <label>2nd Number:</label><br>
+    <input type="text" id="n2" onkeypress="return isNumberKey(event, this.id)"> <br>
+<br>
+<select id="decision">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+</select><br><br>
+<input type="submit" value="=" onclick="calc()" id="equalsTo"><br><br>
+<input type="text" id="resultBobo" readonly><br>
+<input type="button" value="CLEAR" onclick="clearManual()" id="manualClear"> 
+<!-- <button onclick="calc()">=</button>-->
+
+</div>
+
+<div id="buttonCalculator"><br>
+    <form>
+<h3>First Calculator</h3><br>
+
+        <input type="text"  id="result2" />
+        <br><br>
+        <div id="numberBtn">
+        <input type="button" value="7"  onclick="view('7')"class="figurenow numb4">
+        <input type="button" value="8"  onclick="view('8')" class="figurenow numb4">
+        <input type="button" value="9" onclick="view('9')" class="figurenow numb4">
+        <input type="button" value="+"  onclick="ope('+')" class="figurenowO operando">
+        
+        <br><br>
+        <input type="button" value="4"  onclick="view('4')" class="figurenow numb4">
+        <input type="button" value="5"  onclick="view('5')" class="figurenow numb4">
+        <input type="button" value="6"  onclick="view('6')" class="figurenow numb4">
+        <input type="button" value="/"  onclick="ope('/')" class="figurenowO operando">
+
+        
+        <br><br>
+        <input type="button" value="1"  onclick="view('1')" class="figurenow numb4">
+        <input type="button" value="2"  onclick="view('2')"  class="figurenow numb4">
+        <input type="button" value="3"  onclick="view('3')" class="figurenow numb4">
+        <input type="button" value="*"  onclick="ope('*')" class="figurenowO operando">
+        
+        
+        <br><br>
+        <input type="button" value="0" name="btn0" onclick="view('0')" class="figurenow numb4">
+        <input type="button" value="." name="btndot" onclick="dotMan('.')" class="figurenow numb4">
+        <input type="button" value="="onclick="compute()" class="figurenow">
+        <input type="button" value="-"  onclick="ope('-')" class="figurenowO operando">
+       <br><br>
+       <input type="button" value="BACKSPACE" name="btnbs" onclick="backspace()" class="figurenowB">
+        <input type="button" value="CLEAR"  onclick="clr()" class="figurenowC">
+
+        
+
+        </form>
+    </div>
+
+</div>
+
+       
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<div style="margin-top:500px"></div> 
+
+    <script src="calculator.js"></script>
+</body>
+</html>

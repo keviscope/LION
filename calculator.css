@@ -1,0 +1,454 @@
+body{
+    padding: 20px;
+    text-align: center;
+
+}
+
+
+.figurenow{
+    padding: 10px; 
+    border: 1px black solid;
+    margin: 5px;
+    margin-bottom: 10px;
+    color: black;
+    background-color: #ffd4d0;
+
+}
+
+.figurenow:active{
+   
+background-color: red;
+color:whitesmoke;
+}
+
+.figurenowB{
+    padding: 10px; 
+    border: 1px black solid;
+    margin: 5px;
+    margin-bottom: 7px;
+    color: whitesmoke;
+    background-color: red;
+}
+
+.figurenowB:active{
+    background-color: paleturquoise; 
+    color:black;
+}
+
+
+
+.figurenowC{
+    padding: 10px; 
+    border: 1px black solid;
+    margin: 5px;
+    margin-bottom: 7px;
+    color: whitesmoke;
+    background-color: green;
+}
+
+.figurenowC:active{
+    background-color: paleturquoise; 
+    color:black;
+}
+
+
+
+.figurenowO{
+    padding: 10px; 
+    border: 1px black solid;
+    margin: 5px;
+    margin-bottom: 7;
+    color: black;
+    background-color: #f6ffc5;
+    font-size: 20px;
+}
+
+
+
+.figurenowO:hover{
+    background-color: #ffd4d0;
+}
+
+#resultZone{
+    border: 1px black solid;
+ 
+}
+
+
+
+#myInput{
+    padding: 10px;
+   
+    padding-right: 30px;
+}
+
+
+#mainCal{
+    border: 1px  black solid;
+    /*
+    position:absolute; 
+    top: 50%; 
+
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 400px;
+    */
+    background: rgb(238, 255, 175);
+    padding: 20px;
+    margin-left: 100px;
+
+}
+
+
+#numberBtn{
+    background-color: #0b1e06;
+    
+}
+
+#result2{
+    padding: 15px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*manual caculator part*/
+#n1, #n2, #resultBobo{
+padding: 10px;
+}
+
+#decision{
+    padding: 5px;  
+}
+
+#decision option{
+    padding: 5px;  
+    font-size: 30px; 
+    background-color: #ffcece; 
+}
+
+
+
+#equalsTo{
+    padding: 10px;
+    background-color: blue;
+   text-align: center;
+   color: cornsilk;
+   border:none;
+}
+
+#manualClear{
+    border: none;
+}
+
+
+#decision{
+    text-align: center;
+}
+
+#equalsTo:hover{
+   background-color: red;
+   color: white;
+  
+}
+
+label{
+    font-weight: bolder;
+}
+
+
+#manualClear{
+    padding: 10px;
+    background-color: tomato;
+    color: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+/* Percentage calculator */
+#dodo{
+padding: 10px;
+}
+
+
+#dodoPercent{
+    padding: 10px;
+}
+
+
+
+#percentResult{
+    padding: 10px; 
+}
+
+
+#getPercentage{
+background-color: red;
+color: cornsilk;
+padding: 10px;
+border: none;
+}
+
+#clearPercent{
+    background-color: blue;
+    color: honeydew;
+    padding: 10px;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Navigation*/
+
+.toggle-btn{
+    font-size: 50px;
+}
+
+
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .sideBar{
+        position: fixed;
+        width: 30%;
+      
+        right: -30%;
+        background-color: #5a5939;
+        top: 38px;
+    }
+    
+    
+    .sideBar li{
+        color: beige;
+        font-size: 16px;
+        padding: 10px;
+        border-bottom: 1px solid grey;
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+
+    .sideBar li a{
+        text-decoration: none;
+        color: antiquewhite;
+        cursor: pointer;
+    }
+    .toggle-btn{
+        position: relative;
+        right: 30%;
+        top: -40px;
+    }
+    
+    .toggle-btn span{
+        display: block;
+        /*background-color: #f6ffc5;*/
+      
+        width: 10px;
+        height: 5px;
+        margin: 3px;
+        cursor: pointer;
+    }
+    
+    
+    .sideBar.active{
+    right: 0;
+    }
+
+
+
+ li a{
+    font-size: 12px;
+}
+
+
+
+
+
+/*Contact us*/
+
+
+#contactUs{
+display: none;
+}
+
+#contactUs a{
+padding: 10px;
+background-color: blue;
+border: none;
+text-decoration: none;
+color: cornsilk;
+font-weight: bolder;
+border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+    /* history*/
+    #historyZone{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+    /*manual cal*/
+
+    #manualCalculator{
+        display:none;
+    }
+
+
+
+
+    /*percentage calculator*/
+
+    #percentageCalculator{
+        display: none;
+    }
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+    @media screen and (min-width:320px) and (max-width:568px){
+        #result2{
+        
+            padding-right: 10px;
+            padding-left: -100px;
+        }
+        
+
+    }
+
+
+
+    @media screen and (min-width:720px) and (max-width:1024px){
+    
+.figurenow{
+    padding: 25px; 
+    border: 1px black solid;
+    margin: 20px;
+    margin-bottom: 20px;
+    color: black;
+    background-color: #ffd4d0;
+font-size: 30px;
+}
+
+
+
+.figurenowO{
+    padding: 25px; 
+    border: 1px black solid;
+    margin: 20px;
+    margin-bottom: 20px;
+    color: black;
+    background-color: #f6ffc5;
+    font-size: 30px;
+}
+
+
+
+
+.figurenowB{
+    padding: 10px; 
+    border: 1px black solid;
+    margin: 20px;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    background-color: red;
+    font-size: 30px;
+}
+
+
+
+
+
+.figurenowC{
+    padding: 10px; 
+    border: 1px black solid;
+    margin: 20px;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    background-color: green;
+    font-size: 30px;
+}
+
+
+
+#result2{
+           
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+#mainH2{
+    font-size: 40px;
+}
+
+
+    }
+
+
+  #mainCal{
+      text-align: center;
+  }
